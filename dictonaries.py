@@ -1,7 +1,8 @@
-Grocery_Store = [
-    {}
-        "Apple":1,
-        "Banana":2,
-        "Strawberry":1
-    
-]
+students = {
+    "name" :"Andy",
+    "Age": 14,
+    "Grade":2029,
+}
+
+for key in students:
+    print(students["name"])
