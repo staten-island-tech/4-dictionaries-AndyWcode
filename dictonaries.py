@@ -1,8 +1,10 @@
-students = {
-    "name" :"Andy",
-    "Age": 14,
-    "Grade":2029,
-}
+students = [
+    {"Name":"Andy",
+    "Grade": 2029},
+    {"Name":"Duke Dennis",
+     "Grade":2026}
+]
 
-for key in students:
-    print(students["name"])
+for index, student in enumerate(students):
+    print(index, ":", students[0]["Name"])
+    
