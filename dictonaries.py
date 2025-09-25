@@ -6,5 +6,5 @@ students = [
 ]
 
 for index, student in enumerate(students):
-    print(index, ":", students[0]["Name"])
+    print(index, ":", students["Name"])
     
