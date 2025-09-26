@@ -1,34 +1,17 @@
-fruits = [    
-{
-   "itemname": "Apples",
-   "cost": 1
-},
-{
-    "itemname": "Bananas",
-    "cost": 2
-},
-{
-    "itemname":"Orange",
-    "cost": 1.5
-},
+fruits = [ 
+    {"itemname": "Apples", "cost": 1},
+    {"itemname":  "Banana", "cost":2},
+    {"itemname": "Orange", "cost":3}
 ]
 
-for index, item in enumerate(fruits):
-    print(index+1,":", item["itemname"], item["cost"])
-    print("-----------------------")
+for index, fruit in enumerate(fruits):
+    print(f"{index} : {fruit["itemname"]}  ${fruit["cost"]}")
 
 usercart = []
 while True:
-    usersearch = input("What item would you like to purchase?(Use number)(type N to exit): ")
-    if usersearch == item["itemname"]:
-        usercart.append(usersearch)
-        
-    elif usersearch == "N":
+    userinput = int(input("Buy something by entering the number: "))
+    print(f" You bought {fruits[userinput]["itemname"]}, it costs ${fruits[userinput]["cost"]}")
+    usercart.append(fruit["itemname"])
+    if userinput == "N":
         print(usercart)
         break
-    
-   
-
-
-
-
