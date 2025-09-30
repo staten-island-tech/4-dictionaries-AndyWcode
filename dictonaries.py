@@ -30,26 +30,52 @@ fruits = [
         {"itemname":  "Grapes", "cost": .5}
     ]
 
-#     for index, fruit in enumerate(fruits):
-#         print(f"{index} : {fruit["itemname"]}  ${fruit["cost"]}")
 
-#     usercart = []
-#     usertotal = 0
-#     while True:
-#         userinput = input("Buy something by entering the number: ").upper()
-#         if userinput == "N":
-#             print(usercart)
-#             print(f" ${usertotal}")
-#             break
-#         else:
-#             userinput = int(userinput)
-#         print(f" You bought {fruits[userinput]["itemname"]}, it costs ${fruits[userinput]["cost"]}")
-#         usercart.append(fruits[userinput]["itemname"])
-#         usertotal += fruits[userinput]["cost"]
+for index, fruit in enumerate(fruits):
+        print(f"{index+1} : {fruit["itemname"]}  ${fruit["cost"]}")
+
+usercart = []
+usertotal = 0
+while True:
+    userinput = input("What would you like to buy?:")
+    for fruit in fruits:
+        if fruit["itemname"] == userinput:
+            print(f"Added {userinput} to your cart! added ${fruit["cost"]} to your total!")
+            usercart.append(f" {userinput} -- ${fruit["cost"]}")
+            usertotal += fruit["cost"]
+    if userinput == "N":
+        for item in usercart:
+            print(item)
+            print("----------")
+        print(f" Your total is ${usertotal} ")
+    else: 
+         print("Please correct your spelling!")
+    # else:
+    #     userinput = int(userinput)
+    #     print(f" You bought {fruits[userinput]["itemname"]}, it costs ${fruits[userinput]["cost"]}")
+    #     usercart.append(fruits[userinput]["itemname"])
+    #     usertotal += fruits[userinput]["cost"]
 
 
-# buystuffthing()
 
-userinput = input()
+    # TEST TEST
+    # usercart = []
 
-usercart = [ fruits[userinput]]
+    # while True:
+
+    #     userinput = input(":")
+    #     for fruit in fruits:
+    #         if fruit["itemname"] == userinput:
+    #             print(userinput)
+    #             usercart.append(userinput)
+    #         if userinput == "N":
+    #             print(usercart)
+    #             break
+
+
+    
+
+
+
+
+
