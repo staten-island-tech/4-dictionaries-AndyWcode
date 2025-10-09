@@ -82,42 +82,22 @@
 #         output +=1 
     
 
-list = [1,2,3,5,6,7]
+list = [1,2,3,4,5,6,7]
 
-# def streakcounter(numbers):
-#     streak = 1
-#     liststreaks = []
-#     for number in range(len(numbers) - 1):
-#         if numbers[number+1] == numbers[number] + 1:
-#             streak +=1
-#         else:
-#             liststreaks.append(streak)
-#             streak = 1
-#     print(max(liststreaks))
+def streakcounter(numbers):
+    streak = 1
+    liststreaks = []
+    for number in range(len(numbers) - 1):
+        if numbers[number+1] == numbers[number] + 1:
+            streak +=1
+        else:
+            liststreaks.append(streak)
+            streak = 1
+    print(max(liststreaks))
 
 
-# streakcounter(list)
+streakcounter(list)
 
-def evenodd(x):
-    even = 0
-    odd = 0
-    digits = []
-    for digit in str(x):
-        int(digit)
-        digits.append(digit)
 
-    
 
-    for number in digits:
-        if number % 2 == 0:
-            even +=1 
-        elif number % 2 != 0:
-            odd += 1
-    print(f"odd:{odd}")
-    print(f"even:{even}")
 
-evenodd(123)
-    
-def test(x):
-    seperated = [int(x) for number in str(x)]
-    print(seperated)
